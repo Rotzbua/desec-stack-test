@@ -45,7 +45,7 @@ jobs:
     # tests if black formatting is used
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Install black
       run: python3 -m pip install black
     - name: Test desecapi formatting
@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Build images
       uses: ./.github/workflows/build
       with:
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Build images
       uses: ./.github/workflows/build
     - name: Run e2e2 Tests
@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Build images
       uses: ./.github/workflows/build
       with:
